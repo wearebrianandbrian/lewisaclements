@@ -89,10 +89,7 @@
         tile.addEventListener('blur', () => stop(tile));
       }
     });
-    if (!canHover) {
-      const io = new IntersectionObserver((entries) => entries.forEach((e) => (e.intersectionRatio > 0.6 ? play(e.target) : stop(e.target))), { threshold: [0, 0.6] });
-      grid.querySelectorAll('a.tile').forEach((t) => io.observe(t));
-    }
+    // On phones and tablets the covers stay still (with their title cards and effects); previews only play on hover.
   }
 
   /* ---------- Overlay ---------- */
