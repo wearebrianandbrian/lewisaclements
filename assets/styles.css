@@ -388,7 +388,6 @@ button { font: inherit; color: inherit; }
   font-size: clamp(13px, 1.6vw, 22px); color: #fff;
 }
 .tile-title-card.tt-text { bottom: 10%; text-shadow: none; }
-@media (hover: none) { .tile-title-card.tt-text { bottom: 30%; } }
 /* The bubble: types for a moment, then the title pops in like a sent text. Loops every 8s. */
 .tt-msg, .tt-typing { background: #1f8bff; border-radius: 1.2em; box-shadow: 0 8px 30px rgba(0,0,0,.35); position: relative; }
 .tt-msg { display: inline-block; padding: .5em .9em; transform-origin: 100% 100%; animation: msg-pop 8s cubic-bezier(.2,.9,.3,1.25) infinite; }
@@ -652,3 +651,7 @@ button { font: inherit; color: inherit; }
 @media (prefers-reduced-motion: reduce) { .fx-steam > span { animation: none; } }
 
 .tile-title-card.is-mw { z-index: 2; }
+
+/* Phones and tablets: every cover already carries its title artwork, so hide the plain text label to avoid doubling up. */
+@media (hover: none) { .tile-label { display: none; } }
+.tt-mw .mw-top { white-space: nowrap; }
