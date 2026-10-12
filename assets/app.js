@@ -54,6 +54,7 @@
         <img src="${c.cover}" alt="" loading="lazy"${c.coverClass ? ` class="${esc(c.coverClass)}"` : ''} style="${c.coverPos ? `object-position:${esc(c.coverPos)};` : ''}${c.coverZoom ? `scale:${+c.coverZoom};` : ''}">
         ${c.preview ? `<video muted loop playsinline preload="none" src="${c.preview}" aria-hidden="true"></video>` : ''}
         ${c.coverFx === 'smoke' ? smokeFx : ''}
+        ${c.coverFx === 'bobble' ? `<span class="fx-bobble" aria-hidden="true"><img class="bob bob-1" src="media/gogglebox/head-denise.png" alt=""><img class="bob bob-2" src="media/gogglebox/head-duncan.png" alt=""></span>` : ''}
         ${c.coverFx === 'steam' ? steamFx : ''}
         ${c.coverFx === 'embers' || c.coverFx === 'embers-left' ? embersFx.replace('fx-embers', `fx-embers ${c.coverFx}`) : ''}
         ${c.coverFxVideo ? `<video class="fx-video" muted loop playsinline autoplay preload="auto" src="${c.coverFxVideo}" aria-hidden="true"></video>` : ''}

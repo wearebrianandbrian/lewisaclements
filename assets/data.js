@@ -212,6 +212,7 @@ window.CAMPAIGNS = [
       'Every shock, laugh and outrageous comment got that little bit more XL, giving a returning format a burst of new energy. The campaign won Gold for Best Entertainment/Reality at Promax 2023.',
     ],
     coverTitle: { text: 'Celebrity\nGogglebox', pos: 'bottom', style: 'gold' },
+    coverFx: 'bobble',
     cover: 'media/gogglebox/cover.jpg',
     preview: 'media/gogglebox/preview.mp4',
     hero: 'media/gogglebox/c4-celebritygogglebox-goggleheads.mp4',
