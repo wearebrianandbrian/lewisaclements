@@ -171,7 +171,7 @@ window.CAMPAIGNS = [
       'A Film4 Premiere spot for Stage Mother, starring Jacki Weaver and Lucy Liu. A Texas church-choir director inherits her late son’s drag bar in San Francisco, and decides to save it.',
       'I cut it to sell the film’s heart as much as its laughs, building from small-town grief to sequins, showstoppers and a confetti-filled finale, all in 40 seconds.',
     ],
-    coverTitle: { text: 'Stage\nMother', pos: 'bottomleft', style: 'gold' },
+    coverTitle: { text: 'Stage Mother', pos: 'bottomleft', style: 'stage' },
     cover: 'media/film4/stage-mother-cover.jpg',
     preview: 'media/film4/preview-stage-mother.mp4',
     hero: 'media/film4/stage-mother.mp4',
