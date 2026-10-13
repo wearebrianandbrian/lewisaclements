@@ -55,6 +55,9 @@ window.CAMPAIGNS = [
     cover: 'media/everyone-else-burns/cover-keyart.jpg',
     preview: 'media/everyone-else-burns/preview.mp4',
     hero: 'media/everyone-else-burns/eeb.mp4',
+    social: [
+      'media/everyone-else-burns/eeb-cinemagraph.mp4',
+    ],
   },
   {
     slug: 'tom-cruise-week',
