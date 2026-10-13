@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@500;900&family=Pirata+One&family=Playfair+Display:ital,wght@1,700&family=Fraunces:opsz,wght@144,900&display=swap">
-  <link rel="stylesheet" href="assets/styles.css?v=202610131832">
+  <link rel="stylesheet" href="assets/styles.css?v=202610131839">
 </head>
 <body>
   <a class="skip" href="#work">Skip to the work</a>
@@ -32,7 +32,8 @@
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-reel" aria-hidden="true">
-        <video muted loop playsinline autoplay preload="auto" poster="media/reel/reel.poster.jpg?v=202610121157" src="media/reel/reel.mp4?v=202610121157"></video>
+        <video muted loop playsinline autoplay preload="auto" data-v="202610131839"></video>
+        <script>(function(v){var m=matchMedia("(max-aspect-ratio: 4/5)").matches?"reel-mobile":"reel";v.poster="media/reel/"+m+".poster.jpg?v="+v.dataset.v;v.src="media/reel/"+m+".mp4?v="+v.dataset.v;})(document.currentScript.previousElementSibling);</script>
       </div>
       <div class="wrap hero-inner">
         <h1 id="hero-title" class="hero-logo">Lewis<br>Clements</h1>
@@ -133,7 +134,7 @@
     <article class="wrap" id="case"></article>
   </div>
 
-  <script src="assets/data.js?v=202610131832"></script>
-  <script src="assets/app.js?v=202610131832"></script>
+  <script src="assets/data.js?v=202610131839"></script>
+  <script src="assets/app.js?v=202610131839"></script>
 </body>
 </html>
