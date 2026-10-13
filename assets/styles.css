@@ -658,10 +658,12 @@ button { font: inherit; color: inherit; }
 
 /* Celebrity Gogglebox: the two heads gently bobble on their bodies, like the Goggleheads cinemagraph. */
 .fx-bobble { position: absolute; inset: 0; z-index: 0; pointer-events: none; transition: opacity .3s; }
-.fx-bobble .bob { position: absolute !important; right: auto !important; bottom: auto !important; height: auto !important; object-fit: fill !important; transform-origin: 50% 90%; will-change: transform; }
-.fx-bobble .bob-1 { left: 27.75% !important; top: 8.02% !important; width: 24% !important; animation: bobble 1.7s ease-in-out infinite; }
-.fx-bobble .bob-2 { left: 51.5% !important; top: 3.57% !important; width: 22% !important; animation: bobble 1.9s ease-in-out infinite; animation-delay: -.6s; }
-@keyframes bobble { 0%, 100% { transform: rotate(-2.2deg) translateY(0); } 25% { transform: rotate(0deg) translateY(-1.2%); } 50% { transform: rotate(2.2deg) translateY(0); } 75% { transform: rotate(0deg) translateY(-1.2%); } }
+.fx-bobble .bob { position: absolute !important; right: auto !important; bottom: auto !important; height: auto !important; object-fit: fill !important; transform-origin: 50% 90%; will-change: rotate, translate; }
+.fx-bobble .bob-1 { left: 27.75% !important; top: 8.02% !important; width: 24% !important; animation: sway 1.9s var(--sine) infinite alternate, nod .95s var(--sine) infinite alternate; }
+.fx-bobble .bob-2 { left: 51.5% !important; top: 3.57% !important; width: 22% !important; animation: sway 2.2s var(--sine) -.8s infinite alternate, nod 1.1s var(--sine) -.35s infinite alternate; }
+.fx-bobble { --sine: cubic-bezier(.37, 0, .63, 1); }
+@keyframes sway { from { rotate: -2.4deg; } to { rotate: 2.4deg; } }
+@keyframes nod { from { translate: 0 0; } to { translate: 0 -1.3%; } }
 .tile:hover .fx-bobble .bob { scale: 1.03; }
 .tile.is-playing .fx-bobble { opacity: 0; }
 @media (prefers-reduced-motion: reduce) { .fx-bobble .bob { animation: none; } }
