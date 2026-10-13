@@ -52,6 +52,7 @@ window.CAMPAIGNS = [
     ],
     coverTitle: { image: 'media/everyone-else-burns/title.png', pos: 'eeb' },
     coverFx: 'embers',
+    coverFxVideo: 'media/everyone-else-burns/eeb-cover-loop.mp4',
     cover: 'media/everyone-else-burns/cover-keyart.jpg',
     preview: 'media/everyone-else-burns/preview.mp4',
     hero: 'media/everyone-else-burns/eeb.mp4',
