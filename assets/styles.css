@@ -672,7 +672,7 @@ button { font: inherit; color: inherit; }
 .tile-title-card.tt-stage { display: flex; flex-direction: column; align-items: flex-start; max-width: none; text-transform: none; line-height: 1; text-shadow: none; }
 .tt-stage .sm-1 { font-family: "Yellowtail", cursive; font-size: 10cqw; color: #ffe3f4; transform: rotate(-7deg); margin: 0 0 -1.4cqw 1.5cqw;
   text-shadow: 0 0 2px #fff, 0 0 7px #ff4fbf, 0 0 16px #ff2aa8, 0 0 34px #ff1493, 0 0 60px rgba(255,20,147,.55); animation: neon-flicker 6s infinite; }
-.tt-stage .sm-2 { font-family: "Monoton", cursive; font-size: 6.6cqw; color: #fff2fa; letter-spacing: .05em;
+.tt-stage .sm-2 { font-family: "Yellowtail", cursive; font-size: 10cqw; color: #ffe3f4; transform: rotate(-7deg); margin-left: 6cqw;
   text-shadow: 0 0 3px #fff, 0 0 9px #ff5cc6, 0 0 22px #ff1493, 0 0 44px rgba(255,20,147,.5); }
 @keyframes neon-flicker { 0%, 17%, 21%, 24%, 52%, 56%, 100% { opacity: 1; } 19%, 23%, 54% { opacity: .45; } }
 @media (prefers-reduced-motion: reduce) { .tt-stage .sm-1 { animation: none; } }
