@@ -57,7 +57,7 @@
         ${c.coverFx === 'bobble' ? `<span class="fx-bobble" aria-hidden="true"><img class="bob bob-1" src="media/gogglebox/head-denise.png" alt=""><img class="bob bob-2" src="media/gogglebox/head-duncan.png" alt=""></span>` : ''}
         ${c.coverFx === 'steam' ? steamFx : ''}
         ${c.coverFx === 'embers' || c.coverFx === 'embers-left' ? embersFx.replace('fx-embers', `fx-embers ${c.coverFx}`) : ''}
-        ${c.coverFxVideo ? `<video class="fx-video" muted loop playsinline preload="none" src="${c.coverFxVideo}" aria-hidden="true"></video>` : ''}
+        ${c.coverFxVideo ? `<video class="fx-video" muted loop playsinline autoplay preload="metadata" src="${c.coverFxVideo}" aria-hidden="true"></video>` : ''}
         ${c.coverFx === 'water' ? `<span class="fx-water" aria-hidden="true"><img src="${c.cover}" alt="" loading="lazy"></span>` : ''}
         ${c.coverTitle ? `<span class="tile-title-card is-${esc(c.coverTitle.pos || 'left')}${c.coverTitle.style ? ` tt-${esc(c.coverTitle.style)}` : ''}"${c.coverTitle.top ? ` style="top:${esc(c.coverTitle.top)}"` : ''} aria-hidden="true">${c.coverTitle.image ? `<img src="${c.coverTitle.image}" alt="">${c.coverTitle.style === 'flowers' ? vines : ''}${c.coverTitle.style === 'sparkle' ? [[8,18,0],[31,62,1.3],[47,12,2.6],[63,70,.7],[79,22,3.4],[93,58,1.9],[22,88,4.1]].map(([x, y, d]) => `<i class="spk" style="left:${x}%;top:${y}%;animation-delay:${d}s"></i>`).join('') : ''}` : c.coverTitle.style === 'melt' ? dexterMelt : c.coverTitle.style === 'gbh' ? `<span class="gbh-main">${esc(c.coverTitle.text)}</span><span class="gbh-sub">${esc(c.coverTitle.sub || '')}</span>` : c.coverTitle.style === 'ramsay' ? `<span class="rk-1">Ramsay’s</span><span class="rk-2">Kitchen</span><span class="rk-3">Nightmares</span><span class="rk-4">USA</span>` : c.coverTitle.style === 'stage' ? `<span class="sm-1">Stage</span><span class="sm-2">Mother</span>${[[4,8,0],[38,4,1.6],[70,30,.8],[90,6,2.4],[58,92,3.1]].map(([x, y, d]) => `<i class="spk" style="left:${x}%;top:${y}%;animation-delay:${d}s"></i>`).join('')}` : c.coverTitle.style === 'mw' ? `<span class="mw-top">Mitchell and Webb</span><span class="mw-main">Are Not Helping</span>` : c.coverTitle.style === 'dexter' ? `<span class="dx-wrap"><span class="dx-half dx-top">${esc(c.coverTitle.text)}</span><span class="dx-half dx-bot">${esc(c.coverTitle.text)}</span><i class="dx-cut"></i></span>` : c.coverTitle.style === 'text' ? `<span class="tt-typing"><i></i><i></i><i></i></span><span class="tt-msg">${esc(c.coverTitle.text)}</span>` : esc(c.coverTitle.text || c.title)}</span>` : ''}
         <span class="tile-label">
@@ -74,7 +74,7 @@
     if (e.isIntersecting) { fxInView.add(v); v.play().catch(() => {}); }
     else { fxInView.delete(v); v.pause(); }
   }), { threshold: 0.2 });
-  if (!reduceMotion) grid.querySelectorAll('video.fx-video').forEach((v) => fxIO.observe(v));
+  grid.querySelectorAll('video.fx-video').forEach((v) => { v.muted = true; if (reduceMotion) { v.removeAttribute('autoplay'); v.pause(); } else fxIO.observe(v); });
 
   // Hover previews (desktop) / in-view previews (touch). Never autoplay with reduced motion.
   if (!reduceMotion) {
