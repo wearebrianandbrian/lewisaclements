@@ -83,9 +83,9 @@ window.CAMPAIGNS = [
       'I cut it to sell the film’s heart as much as its laughs, building from small-town grief to sequins, showstoppers and a confetti-filled finale, all in 40 seconds.',
     ],
     coverTitle: { text: 'Stage Mother', pos: 'bottomleft', style: 'stage' },
-    cover: 'media/film4/stage-mother-cover.jpg',
-    preview: 'media/film4/preview-stage-mother.mp4',
-    hero: 'media/film4/stage-mother.mp4',
+    cover: 'media/film4/stage-mother-cover.jpg?v=202610161236',
+    preview: 'media/film4/preview-stage-mother.mp4?v=202610161236',
+    hero: 'media/film4/stage-mother.mp4?v=202610161236',
   },
   {
     slug: 'mitchell-and-webb',
