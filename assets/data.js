@@ -42,6 +42,26 @@ window.CAMPAIGNS = [
     ],
   },
   {
+    slug: 'crank-up-the-comedy',
+    title: 'Crank Up the Comedy',
+    client: 'Channel 4',
+    role: 'Edit & voiceover',
+    intro: [
+      'For Channel 4’s latest comedy campaign, we threw some of C4’s funniest faces into one sweaty, stupid, deeply chaotic nightclub, then topped it off with a banger that’ll be stuck in your head for days, months, or possibly years.',
+      'Oh, and they let me do the VO. The campaign is nominated for Best Comedy at the 2026 GEMAs.',
+    ],
+    coverTitle: { text: 'Crank Up the Comedy', pos: 'bottom', style: 'text' },
+    cover: 'media/crank/cover.jpg',
+    preview: 'media/crank/preview.mp4',
+    hero: 'media/crank/crank-trailer-40.mp4',
+    filmsLabel: 'Cutdown',
+    films: ['media/crank/crank-trailer-20.mp4'],
+    social: [
+      { src: 'media/crank/crank-social-1.mp4', group: 'crank' },
+      { src: 'media/crank/crank-social-2.mp4', group: 'crank' },
+    ],
+  },
+  {
     slug: 'everyone-else-burns',
     title: 'Everyone Else Burns',
     client: 'Channel 4',
