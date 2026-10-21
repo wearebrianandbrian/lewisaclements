@@ -678,8 +678,9 @@ button { font: inherit; color: inherit; }
 @media (prefers-reduced-motion: reduce) { .tt-stage .sm-1 { animation: none; } }
 .tt-stage .spk { filter: drop-shadow(0 0 4px #ff7fd0) drop-shadow(0 0 2px #fff); }
 
-/* Crank Up the Comedy: the title as cyan-green neon tubes, to sit with the dance-floor cover */
-.tile-title-card.tt-crank { color: #effff8; letter-spacing: .03em;
-  text-shadow: 0 0 2px #fff, 0 0 8px #7dffd6, 0 0 18px #2bffbf, 0 0 36px #00e0aa, 0 0 64px rgba(0,224,170,.5);
-  animation: neon-flicker 7s infinite; }
-@media (prefers-reduced-motion: reduce) { .tile-title-card.tt-crank { animation: none; } }
+/* Crank Up the Comedy: Channel 4's comedy title look. Chunky rounded type, white with a thick green outline,
+   pink, yellow and cyan echoes trailing behind, tilted upwards. */
+.tile-title-card.tt-crank { font-family: "Nunito", "Arial Rounded MT Bold", sans-serif; font-weight: 900; letter-spacing: .01em;
+  font-size: clamp(20px, 3.1vw, 46px); color: #fff; bottom: 20%; transform: rotate(-10deg); text-shadow: none;
+  -webkit-text-stroke: .12em #33ff2e; paint-order: stroke fill;
+  filter: drop-shadow(-.05em .05em 0 rgba(255,80,210,.75)) drop-shadow(-.05em .05em 0 rgba(255,230,60,.6)) drop-shadow(.04em -.04em 0 rgba(80,215,255,.55)) drop-shadow(0 0 .3em rgba(51,255,46,.6)); }
